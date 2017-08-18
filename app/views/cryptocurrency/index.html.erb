@@ -1,0 +1,32 @@
+<h1>Cryptocurrency</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Symbol</th>
+      <th>Rank</th>
+      <th>Price US</th>
+      <th>Total Supply</th>
+      <th>1 Hour Change</th>
+      <th>1 Day Change</th>
+      <th>1 Week Change</th>
+      <th>Last Update</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @profile.each do |key, value| %>
+    <tr>
+    <td><%= key["name"]%></td>
+    <td><%= key["symbol"]%></td>
+    <td><%= key["rank"]%></td>
+    <td><%= key["price_usd"]%></td>
+    <td><%= key["total_supply"]%></td>
+    <td><%= key["percent_change_1h"]%></td>
+    <td><%= key["percent_change_24h"]%></td>
+    <td><%= key["percent_change_7d"]%></td>
+    <td><%= key["last_updated"]%></td>
+    <% end %>
+
+  </tbody>
+</table>
